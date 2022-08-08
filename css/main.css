@@ -1,0 +1,117 @@
+:root {
+  --white-text-color: #fff;
+  --title-text-color: #D41443;
+  --pretitle-text-color: #FFA5BA;
+  --main-bg-color: #FFF5F6;
+  --mobile-menu-bg-color: #E17992;
+  --hero-bg-color: #FFB8CA;
+  --main-font: "DM Sans", sans-serif;
+  --title-font: "Titan One", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  font-family: var(--title-font);
+  text-transform: uppercase;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--title-text-color);
+  background-color: var(--white-text-color);
+}
+.button:hover, .button:focus {
+  color: var(--white-text-color);
+  background-color: var(--title-text-color);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 502px;
+  padding-top: 194px;
+  background-color: var(--hero-bg-color);
+  background-image: url(/images/mobile/hero-img@1x.png), url(/images/mobile/hero-circle@1x.png);
+  background-repeat: no-repeat;
+  background-position: top 92px right 32px, top 83px right 0;
+}
+.hero__title {
+  width: 218px;
+  font-size: 26px;
+  line-height: 1.154;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+  color: var(--white-text-color);
+}
+.hero__title-accent {
+  font-size: 48px;
+  line-height: 0.965;
+  color: var(--title-text-color);
+}
+
+.hero-list {
+  display: flex;
+  gap: 8px;
+}
+.hero-list__link {
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 8px;
+  line-height: 1.25;
+}/*# sourceMappingURL=main.css.map */
