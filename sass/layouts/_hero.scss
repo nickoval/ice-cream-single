@@ -1,14 +1,36 @@
 .hero {
   position: relative;
 
-  width: 100%;
+  // width: 100%;
   height: 502px;
   padding-top: 194px;
+  @include for-tablet-up {
+    height: 416px;
+    padding-top: 102px;
+  }
   background-color: var(--hero-bg-color);
-  background-image: url(/images/mobile/hero-img@1x.png), url(/images/mobile/hero-circle@1x.png);
   background-repeat: no-repeat;
-  background-position: top 92px right 32px,
-    top 83px right 0;
+  background-position: top 92px right 32px, top 83px right 0;
+
+  .webp & {
+    background-image: url(../images/mobile/hero-img@1x.webp), url(../images/mobile/hero-circle@1x.webp);
+        
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/mobile/hero-img@2x.webp), url(../images/mobile/hero-circle@2x.webp);
+          }
+  }
+  .no-webp &{
+    background-image: url(../images/mobile/hero-img@1x.png), url(../images/mobile/hero-circle@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/hero-img@2x.png), url(../images/mobile/hero-circle@2x.png);
+      }
+  }
+
+  
 
 
   &__title{
@@ -49,3 +71,32 @@
   }
 }
 
+
+
+
+.description {
+  display: none;
+  
+  @include for-tablet-up {
+    display: block;
+    width: 114px;
+    margin-top: 61px;
+    margin-left: 184px;
+  
+    &__text {
+      font-size: 8px;
+      line-height: 1.5;
+      margin-bottom: 7px;
+      color: var(--white-text-color);
+    }
+  
+    &__button {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      // color: var(--white-text-color);
+      // background-color: ;
+    }
+  }
+
+}
