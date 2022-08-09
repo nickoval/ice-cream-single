@@ -94,13 +94,8 @@ img {
   padding-top: 194px;
   background-color: var(--hero-bg-color);
   background-repeat: no-repeat;
+  background-size: 171px 410px, 284px 344px;
   background-position: top 92px right 32px, top 83px right 0;
-}
-@media (min-width: 768px) {
-  .hero {
-    height: 416px;
-    padding-top: 102px;
-  }
 }
 .webp .hero {
   background-image: url(../images/mobile/hero-img@1x.webp), url(../images/mobile/hero-circle@1x.webp);
@@ -118,6 +113,32 @@ img {
     background-image: url(../images/mobile/hero-img@2x.png), url(../images/mobile/hero-circle@2x.png);
   }
 }
+@media (min-width: 768px) {
+  .hero {
+    height: 416px;
+    padding-top: 102px;
+    background-size: 143px 336px, 335px 333px;
+    background-position: top 80px right 303px, top 43px right 185px;
+  }
+  .webp .hero {
+    background-image: url(../images/tablet/hero-img@1x.webp), url(../images/tablet/hero-circle@1x.webp);
+  }
+}
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
+  .webp .hero {
+    background-image: url(../images/tablet/hero-img@2x.webp), url(../images/tablet/hero-circle@2x.webp);
+  }
+}
+@media (min-width: 768px) {
+  .no-webp .hero {
+    background-image: url(../images/tablet/hero-img@1x.png), url(../images/tablet/hero-circle@1x.png);
+  }
+}
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
+  .no-webp .hero {
+    background-image: url(../images/tablet/hero-img@2x.png), url(../images/tablet/hero-circle@2x.png);
+  }
+}
 .hero__title {
   width: 218px;
   font-size: 26px;
@@ -126,10 +147,22 @@ img {
   margin-bottom: 20px;
   color: var(--white-text-color);
 }
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 22px;
+    line-height: 1.136;
+  }
+}
 .hero__title-accent {
   font-size: 48px;
   line-height: 0.965;
   color: var(--title-text-color);
+}
+@media (min-width: 768px) {
+  .hero__title-accent {
+    font-size: 34px;
+    line-height: 0.905;
+  }
 }
 
 .hero-list {
@@ -151,7 +184,7 @@ img {
     display: block;
     width: 114px;
     margin-top: 61px;
-    margin-left: 184px;
+    margin-left: 152px;
   }
   .description__text {
     font-size: 8px;
@@ -164,4 +197,16 @@ img {
     height: 18px;
     border-radius: 50%;
   }
+}
+
+.bio-eco {
+  position: absolute;
+  left: 32px;
+  bottom: 16px;
+}
+
+.so-tasty {
+  position: absolute;
+  right: 32px;
+  bottom: 0px;
 }/*# sourceMappingURL=main.css.map */

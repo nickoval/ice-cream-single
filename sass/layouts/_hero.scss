@@ -4,14 +4,11 @@
   // width: 100%;
   height: 502px;
   padding-top: 194px;
-  @include for-tablet-up {
-    height: 416px;
-    padding-top: 102px;
-  }
+
   background-color: var(--hero-bg-color);
   background-repeat: no-repeat;
+  background-size: 171px 410px, 284px 344px;
   background-position: top 92px right 32px, top 83px right 0;
-
   .webp & {
     background-image: url(../images/mobile/hero-img@1x.webp), url(../images/mobile/hero-circle@1x.webp);
         
@@ -30,6 +27,33 @@
       }
   }
 
+
+  @include for-tablet-up {
+    height: 416px;
+    padding-top: 102px;
+    background-size: 143px 336px, 335px 333px;
+    background-position: top 80px right 303px, top 43px right 185px;
+    .webp & {
+    background-image: url(../images/tablet/hero-img@1x.webp), url(../images/tablet/hero-circle@1x.webp);
+  
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/tablet/hero-img@2x.webp), url(../images/tablet/hero-circle@2x.webp);
+      }
+    }
+  
+  .no-webp & {
+    background-image: url(../images/tablet/hero-img@1x.png), url(../images/tablet/hero-circle@1x.png);
+  
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/tablet/hero-img@2x.png), url(../images/tablet/hero-circle@2x.png);
+      }
+    }
+  }
+
   
 
 
@@ -39,20 +63,39 @@
     font-size: 26px;
     line-height: 1.154;
     letter-spacing: 0.04em;
+    @include for-tablet-up {
+      font-size: 22px;
+      line-height: 1.136;
+    }
 
     margin-bottom: 20px;
     
     color: var(--white-text-color);
 
   }
-
   &__title-accent {
     font-size: 48px;
     line-height: 0.965;
+    @include for-tablet-up {
+      font-size: 34px;
+      line-height: 0.905;
+    }
 
     color: var(--title-text-color);
-
   }
+
+  // &__images {
+  //   display: none;
+  //   @include for-tablet-up {
+  //     display: block;
+  //   }
+  // }
+
+  // .hero__bio-eco {
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 16px;
+  // }
 }
 
 .hero-list {
@@ -81,7 +124,7 @@
     display: block;
     width: 114px;
     margin-top: 61px;
-    margin-left: 184px;
+    margin-left: 152px;
   
     &__text {
       font-size: 8px;
@@ -94,9 +137,19 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      // color: var(--white-text-color);
-      // background-color: ;
     }
   }
+ 
+}
 
+.bio-eco {
+  position: absolute;
+  left: 32px;
+  bottom: 16px;
+}
+
+.so-tasty {
+  position: absolute;
+  right: 32px;
+  bottom: 0px;
 }
